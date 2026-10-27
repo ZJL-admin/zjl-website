@@ -1,0 +1,596 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zhijinlian International Limited | 智金鏈國際有限公司</title>
+<meta name="description" content="Zhijinlian International Limited is a Hong Kong-based trader of non-ferrous metals and industrial raw materials, connecting global supply with demand across Asia.">
+<style>
+:root{
+  --side:272px;
+  --bg:#fbfaf8;
+  --soft:#f1efeb;
+  --ink:#15191f;
+  --ink-2:#4d5460;
+  --muted:#8a909a;
+  --line:#e2dfd9;
+  --navy:#101c2c;
+  --navy-2:#1a2a3f;
+  --navy-line:#2a3b52;
+  --copper:#b4643a;
+  --copper-2:#d48a5c;
+  --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --sans:"Source Sans 3",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+}
+html[lang="zh"]{
+  --serif:"Noto Serif SC","Source Serif 4","Songti SC","SimSun",serif;
+  --sans:"Noto Sans SC","Source Sans 3","PingFang SC","Microsoft YaHei",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16.5px;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html[lang="zh"] body{font-size:16px;line-height:1.85}
+a{color:inherit;text-decoration:none}
+button{font:inherit;font-family:var(--sans)}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.22}
+html[lang="zh"] h1,html[lang="zh"] h2,html[lang="zh"] h3,html[lang="zh"] h4{font-weight:500;letter-spacing:.02em;line-height:1.38}
+.label{font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--copper);font-weight:600}
+
+/* ===== SIDEBAR ===== */
+.side{position:fixed;top:0;left:0;bottom:0;width:var(--side);background:var(--navy);color:#cfd6df;display:flex;flex-direction:column;padding:40px 36px 32px;z-index:60}
+.brand{display:flex;flex-direction:column;line-height:1.2}
+.brand-en{font-family:"Source Serif 4",Georgia,serif;font-size:20px;font-weight:600;letter-spacing:.14em;color:#fff}
+.brand-cn{font-family:"Noto Serif SC",serif;font-size:12px;color:#8696aa;letter-spacing:.42em;margin-top:4px}
+.side-nav{list-style:none;margin-top:64px;counter-reset:n}
+.side-nav li{counter-increment:n}
+.side-nav a{display:flex;align-items:baseline;gap:14px;padding:11px 0;font-size:15px;color:#a9b5c3;transition:color .2s}
+.side-nav a::before{content:"0" counter(n);font-family:"Source Serif 4",serif;font-size:12.5px;color:#5d6f86;width:20px;transition:color .2s}
+.side-nav a:hover{color:#fff}
+.side-nav a.active{color:#fff}
+.side-nav a.active::before{color:var(--copper-2)}
+.side-nav a .bar{flex:1;height:1px;background:transparent;align-self:center;transition:background .3s}
+.side-nav a.active .bar{background:var(--copper-2)}
+.side-foot{margin-top:auto}
+.lang{display:flex;gap:6px;margin-bottom:22px}
+.lang button{background:none;border:1px solid var(--navy-line);color:#a9b5c3;padding:6px 14px;font-size:13px;font-weight:600;cursor:pointer}
+.lang button.on{background:var(--copper);border-color:var(--copper);color:#fff}
+.side-foot small{display:block;font-size:12px;color:#6c7d93;line-height:1.6}
+
+/* mobile top bar */
+.mbar{display:none}
+
+/* ===== MAIN ===== */
+main{margin-left:var(--side)}
+.inner{max-width:1080px;padding:0 72px}
+section{padding:112px 0;border-bottom:1px solid var(--line)}
+.head{margin-bottom:56px;max-width:760px}
+.head h2{font-size:clamp(28px,3.2vw,44px);margin-top:14px}
+
+/* HERO: split screen */
+.hero{display:grid;grid-template-columns:1.2fr .8fr;min-height:100vh;padding:0;border-bottom:0}
+.hero-l{display:flex;flex-direction:column;justify-content:center;padding:80px 72px}
+.hero h1{font-size:clamp(38px,4.6vw,66px);margin-top:24px}
+.hero h1 .hl{color:var(--copper)}
+.hero .lead{margin-top:26px;font-size:18.5px;color:var(--ink-2);max-width:560px}
+.hero-cta{margin-top:40px;display:flex;gap:28px;flex-wrap:wrap;align-items:center}
+.lnk{display:inline-flex;align-items:center;gap:10px;font-size:15px;font-weight:600;padding-bottom:6px;border-bottom:2px solid var(--ink)}
+.lnk:hover{color:var(--copper);border-color:var(--copper)}
+.lnk.alt{border-bottom-color:var(--line);color:var(--ink-2)}
+.hero-r{background:linear-gradient(160deg,#c97a4c 0%,#a5552d 55%,#6f3318 100%);color:#fff;display:flex;flex-direction:column;justify-content:space-between;padding:56px 48px;position:relative;overflow:hidden}
+.hero-r .el{position:relative;z-index:1;border:1px solid rgba(255,255,255,.5);width:148px;height:148px;padding:14px 16px;display:flex;flex-direction:column;justify-content:space-between}
+.hero-r .el b{font-family:"Source Serif 4",serif;font-weight:400;font-size:64px;line-height:1}
+.hero-r .el small{font-size:12px;letter-spacing:.12em;opacity:.85}
+.hero-r .el .z{font-size:13px;align-self:flex-end;opacity:.85}
+.hero-r .rings{position:absolute;right:-140px;top:50%;transform:translateY(-50%);width:520px;height:520px;opacity:.35}
+.facts{position:relative;z-index:1;list-style:none}
+.facts li{padding:20px 0;border-top:1px solid rgba(255,255,255,.35)}
+.facts li span{display:block;font-family:var(--serif);font-size:28px}
+.facts li small{display:block;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;opacity:.85}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px 56px}
+.about-grid .big{grid-column:1/-1;font-family:var(--serif);font-size:24px;line-height:1.5}
+.about-grid p{color:var(--ink-2)}
+.about-grid .big{color:var(--ink)}
+.dl{margin-top:64px;border-top:1px solid var(--ink)}
+.dl-row{display:grid;grid-template-columns:64px 260px 1fr;gap:24px;padding:24px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.dl-row .i{font-family:"Source Serif 4",serif;color:var(--copper);font-size:15px}
+.dl-row h3{font-size:21px}
+.dl-row p{color:var(--ink-2);font-size:15.5px}
+
+/* COMMODITIES: tabbed */
+#commodities{background:var(--soft)}
+.tabs{display:grid;grid-template-columns:300px 1fr;background:#fff;border:1px solid var(--line);min-height:400px}
+.tab-list{list-style:none;border-right:1px solid var(--line)}
+.tab-list button{width:100%;display:flex;justify-content:space-between;align-items:center;gap:12px;text-align:left;background:none;border:0;border-bottom:1px solid var(--line);padding:20px 26px;cursor:pointer;font-size:16px;color:var(--ink-2);transition:.2s;border-left:3px solid transparent}
+.tab-list li:last-child button{border-bottom:0}
+.tab-list button .s{font-family:"Source Serif 4",serif;font-size:13px;color:var(--muted)}
+.tab-list button:hover{background:var(--bg)}
+.tab-list button.on{color:var(--ink);background:var(--bg);border-left-color:var(--copper);font-weight:600}
+.tab-list button.on .s{color:var(--copper)}
+.pane{display:none;padding:52px 56px;position:relative}
+.pane.on{display:block;animation:fade .4s ease}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.pane .sym{font-family:"Source Serif 4",serif;font-size:96px;line-height:1;color:var(--soft);position:absolute;right:48px;top:36px;-webkit-text-stroke:1px var(--line)}
+.pane h3{font-size:34px;position:relative}
+.pane p{margin-top:18px;max-width:560px;color:var(--ink-2);font-size:17px;position:relative}
+.pane .tags{margin-top:36px;display:flex;flex-wrap:wrap;gap:10px}
+.pane .tags span{font-size:13.5px;padding:7px 14px;border:1px solid var(--line);color:var(--ink)}
+
+/* MODEL: sticky left */
+.sticky-wrap{display:grid;grid-template-columns:340px 1fr;gap:64px;align-items:start}
+.sticky-wrap .head{position:sticky;top:48px;margin-bottom:0}
+.steps{list-style:none}
+.steps li{display:grid;grid-template-columns:88px 1fr;gap:20px;padding:30px 0;border-top:1px solid var(--line)}
+.steps li:first-child{border-top:1px solid var(--ink)}
+.steps .n{font-family:"Source Serif 4",serif;font-size:48px;line-height:1;color:var(--line);-webkit-text-stroke:1px var(--copper);color:transparent}
+.steps h3{font-size:23px;margin-bottom:8px}
+.steps p{color:var(--ink-2);font-size:15.5px}
+.routes{margin-top:80px;display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--ink)}
+.route{padding:36px 34px}
+.route+.route{border-left:1px solid var(--ink)}
+.route h4{font-size:24px;margin:12px 0 12px}
+.route p{font-size:15px;color:var(--ink-2)}
+.fl{display:flex;align-items:flex-start;margin-top:30px}
+.nd{display:flex;flex-direction:column;align-items:center;gap:10px;flex:none;text-align:center}
+.nd i{width:12px;height:12px;border:1.5px solid var(--ink);border-radius:50%;margin-top:3px}
+.nd.me i{width:18px;height:18px;margin-top:0;background:var(--copper);border-color:var(--copper)}
+.nd span{font-size:13px;color:var(--ink-2);line-height:1.3}
+.nd:first-child{align-items:flex-start;text-align:left}
+.nd:last-child{align-items:flex-end;text-align:right}
+.ln{flex:1;border-top:1px dashed var(--muted);margin-top:9px;min-width:16px}
+
+/* SETTLEMENT: table rows */
+.rows{border-top:1px solid var(--ink)}
+.row{display:grid;grid-template-columns:180px 280px 1fr;gap:28px;padding:28px 0;border-bottom:1px solid var(--line);align-items:baseline;transition:background .2s}
+.row:hover{background:var(--soft)}
+.row .k{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--copper);font-weight:600;padding-left:8px}
+.row h3{font-size:22px}
+.row p{color:var(--ink-2);font-size:15.5px;padding-right:8px}
+
+/* REACH: big map + columns */
+#reach{background:var(--navy);color:#fff;border-bottom:0}
+#reach .head h2{color:#fff}
+#reach .label{color:var(--copper-2)}
+.map{margin:0 -20px}
+.map svg{width:100%;height:auto;display:block}
+.reach-cols{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:40px}
+.reach-cols li{border-top:2px solid var(--copper-2);padding-top:18px}
+.reach-cols b{display:block;font-family:var(--serif);font-weight:400;font-size:21px}
+.reach-cols span{display:block;margin-top:6px;font-size:14.5px;color:#9fb0c2}
+
+/* RESPONSIBILITY: 4 columns */
+.cols4{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-left:1px solid var(--line)}
+.c4{padding:6px 26px 6px;border-right:1px solid var(--line)}
+.c4 svg{width:30px;height:30px;color:var(--copper)}
+.c4 h3{font-size:21px;margin:22px 0 10px}
+.c4 p{font-size:15px;color:var(--ink-2)}
+
+/* STATEMENT + FOOTER */
+.statement{background:var(--soft);padding:104px 0}
+.statement blockquote{font-family:var(--serif);font-size:clamp(24px,2.8vw,36px);line-height:1.45;max-width:880px;padding-left:32px;border-left:3px solid var(--copper)}
+.statement blockquote .hl{color:var(--copper)}
+footer{padding:40px 0;font-size:13.5px;color:var(--muted)}
+footer .inner{display:flex;justify-content:space-between;gap:12px 32px;flex-wrap:wrap}
+footer p{max-width:520px}
+
+/* REVEAL */
+.js .rv{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
+.js .rv.in{opacity:1;transform:none}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width:1280px){
+  .inner{padding:0 52px}
+  .hero-l{padding:72px 52px}
+  .sticky-wrap{grid-template-columns:1fr;gap:40px}
+  .sticky-wrap .head{position:static}
+  .cols4{grid-template-columns:1fr 1fr;row-gap:40px}
+  .row{grid-template-columns:150px 220px 1fr}
+}
+@media (max-width:1000px){
+  :root{--side:0px}
+  .side{transform:translateX(-100%);transition:transform .35s ease;width:min(320px,86vw);padding-top:96px;visibility:hidden;transition:transform .35s ease,visibility 0s .35s}
+  .side.open{transform:none;visibility:visible;box-shadow:12px 0 40px rgba(0,0,0,.25);transition:transform .35s ease}
+  .side .brand{display:none}
+  .side-nav{margin-top:0}
+  .side-nav a{font-size:17px;padding:14px 0}
+  .scrim{position:fixed;inset:0;background:rgba(10,16,26,.45);z-index:55;opacity:0;pointer-events:none;transition:opacity .3s}
+  .scrim.open{opacity:1;pointer-events:auto}
+  .mbar{display:flex;position:sticky;top:0;z-index:70;height:64px;align-items:center;justify-content:space-between;padding:0 20px;background:var(--navy)}
+  .mbar .brand-en{font-size:17px}
+  .mbar .brand-cn{font-size:11px}
+  .mbar-r{display:flex;align-items:center;gap:10px}
+  .mbar .lang{margin:0}
+  .mbar .lang button{padding:5px 10px;font-size:12.5px}
+  .burger{background:none;border:0;width:40px;height:40px;cursor:pointer}
+  .burger span{display:block;width:22px;height:2px;background:#fff;margin:5px auto;transition:.3s}
+  .burger.x span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .burger.x span:nth-child(2){opacity:0}
+  .burger.x span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  .side-foot .lang{display:none}
+  .hero{grid-template-columns:1fr;min-height:0}
+  .hero-r{flex-direction:row;align-items:flex-end;gap:32px;padding:40px 36px}
+  .facts{flex:1}
+  .tabs{grid-template-columns:1fr}
+  .tab-list{display:flex;overflow-x:auto;border-right:0;border-bottom:1px solid var(--line);-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .tab-list::-webkit-scrollbar{display:none}
+  .tab-list button{border-bottom:0;border-left:0;border-bottom:3px solid transparent;white-space:nowrap;padding:16px 18px}
+  .tab-list button .s{display:none}
+  .tab-list button.on{border-bottom-color:var(--copper)}
+  .reach-cols{grid-template-columns:1fr 1fr}
+}
+@media (max-width:720px){
+  body{font-size:16px}
+  .inner{padding:0 20px}
+  section{padding:72px 0}
+  .head{margin-bottom:36px}
+  .hero-l{padding:56px 20px 48px}
+  .hero .lead{font-size:17px}
+  .hero-r{flex-direction:column;align-items:stretch;padding:32px 20px}
+  .hero-r .el{width:112px;height:112px;margin-bottom:24px}
+  .hero-r .el b{font-size:46px}
+  .facts li span{font-size:23px}
+  .facts li{padding:14px 0}
+  .about-grid{grid-template-columns:1fr;gap:20px}
+  .about-grid .big{font-size:20px}
+  .dl{margin-top:44px}
+  .dl-row{grid-template-columns:36px 1fr;gap:4px 14px}
+  .dl-row p{grid-column:2}
+  .pane{padding:32px 22px 36px}
+  .pane .sym{font-size:64px;right:18px;top:20px}
+  .pane h3{font-size:27px}
+  .pane p{font-size:16px}
+  .steps li{grid-template-columns:56px 1fr;gap:12px;padding:24px 0}
+  .steps .n{font-size:34px}
+  .routes{grid-template-columns:1fr;margin-top:48px}
+  .route{padding:28px 22px}
+  .route+.route{border-left:0;border-top:1px solid var(--ink)}
+  .row{grid-template-columns:1fr;gap:6px;padding:22px 0}
+  .row .k,.row p{padding:0}
+  .row:hover{background:none}
+  .reach-cols{grid-template-columns:1fr;gap:20px}
+  .map{margin:0 -10px}
+  .map text{display:none}
+  .cols4{grid-template-columns:1fr;border-left:0;row-gap:0}
+  .c4{border-right:0;border-top:1px solid var(--line);padding:26px 0}
+  .statement{padding:72px 0}
+  .statement blockquote{padding-left:20px}
+}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}.pane.on{animation:none}}
+</style>
+<script>document.documentElement.className='js';</script>
+</head>
+<body>
+
+<!-- mobile bar -->
+<div class="mbar">
+  <a href="#top" class="brand"><span class="brand-en">ZHIJINLIAN</span><span class="brand-cn">智金鏈國際</span></a>
+  <div class="mbar-r">
+    <div class="lang" role="group" aria-label="Language"><button type="button" data-lang="en" class="on">EN</button><button type="button" data-lang="zh">中文</button></div>
+    <button class="burger" type="button" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</div>
+<div class="scrim"></div>
+
+<!-- sidebar -->
+<aside class="side" id="side">
+  <a href="#top" class="brand" aria-label="Zhijinlian International Limited"><span class="brand-en">ZHIJINLIAN</span><span class="brand-cn">智金鏈國際</span></a>
+  <ul class="side-nav">
+    <li><a href="#about"><span data-i18n="nav.about">About</span><span class="bar"></span></a></li>
+    <li><a href="#commodities"><span data-i18n="nav.com">Commodities</span><span class="bar"></span></a></li>
+    <li><a href="#model"><span data-i18n="nav.model">How We Trade</span><span class="bar"></span></a></li>
+    <li><a href="#settlement"><span data-i18n="nav.settle">Settlement</span><span class="bar"></span></a></li>
+    <li><a href="#reach"><span data-i18n="rch.k">Our reach</span><span class="bar"></span></a></li>
+    <li><a href="#responsibility"><span data-i18n="nav.resp">Responsibility</span><span class="bar"></span></a></li>
+  </ul>
+  <div class="side-foot">
+    <div class="lang" role="group" aria-label="Language"><button type="button" data-lang="en" class="on">EN</button><button type="button" data-lang="zh">中文</button></div>
+    <small data-i18n="ft.inc">Incorporated in Hong Kong SAR</small>
+    <small>© <span class="yr">2026</span> Zhijinlian International Limited</small>
+  </div>
+</aside>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-l">
+    <div class="label rv" data-i18n="hero.eyebrow">Hong Kong · Commodity Trading</div>
+    <h1 class="rv" data-i18n="hero.title">Linking the world's <span class="hl">metals</span> to the markets that need them.</h1>
+    <p class="lead rv" data-i18n="hero.lead">Zhijinlian International Limited trades non-ferrous metals and industrial raw materials, connecting global producers and suppliers with industrial demand across Asia.</p>
+    <div class="hero-cta rv">
+      <a href="#commodities" class="lnk" data-i18n="hero.cta1">Our commodities →</a>
+      <a href="#model" class="lnk alt" data-i18n="hero.cta2">How we trade</a>
+    </div>
+  </div>
+  <div class="hero-r" aria-label="Key facts">
+    <svg class="rings" viewBox="0 0 520 520" aria-hidden="true"><g fill="none" stroke="#fff"><circle cx="260" cy="260" r="250"/><circle cx="260" cy="260" r="190"/><circle cx="260" cy="260" r="130"/><circle cx="260" cy="260" r="70"/></g></svg>
+    <div class="el" aria-hidden="true"><span class="z">29</span><b>Cu</b><small>63.546</small></div>
+    <ul class="facts">
+      <li><span>2018</span><small data-i18n="hero.m1">Established in Hong Kong</small></li>
+      <li><span>HK · SG · CN</span><small data-i18n="hero.m2">Core trade corridors</small></li>
+      <li><span data-i18n="hero.m3a">Metals</span><small data-i18n="hero.m3">Core product focus</small></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="inner">
+    <div class="head">
+      <div class="label rv" data-i18n="about.k">About us</div>
+      <h2 class="rv" data-i18n="about.h">A focused trading house built on supply-chain discipline.</h2>
+    </div>
+    <div class="about-grid">
+      <p class="big rv" data-i18n="about.p1">Founded in Hong Kong in 2018, Zhijinlian focuses on global commodity trading, with non-ferrous metals at its core and rubber and other industrial raw materials alongside.</p>
+      <p class="rv" data-i18n="about.p2">Our team brings long-standing relationships across the metals supply chain, from leading international trading houses and producers to established industrial buyers in Greater China and Southeast Asia. That network lets us secure reliable, quality-assured supply and place it efficiently with end users.</p>
+      <p class="rv" data-i18n="about.p3">We work with every partner on clear contract terms, prudent risk controls and timely settlement, and we aim to grow alongside our suppliers, customers and banks on a sound, transparent footing.</p>
+    </div>
+    <div class="dl">
+      <div class="dl-row rv"><span class="i">i.</span><h3 data-i18n="pil.1h">Reliable supply</h3><p data-i18n="pil.1p">Sourcing from established global suppliers to secure quality, brand-verified material.</p></div>
+      <div class="dl-row rv"><span class="i">ii.</span><h3 data-i18n="pil.2h">Prudent risk management</h3><p data-i18n="pil.2p">Disciplined controls on pricing, credit and counterparties for every transaction.</p></div>
+      <div class="dl-row rv"><span class="i">iii.</span><h3 data-i18n="pil.3h">Efficient execution</h3><p data-i18n="pil.3p">Streamlined documentation, logistics and settlement across borders.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMODITIES -->
+<section id="commodities">
+  <div class="inner">
+    <div class="head">
+      <div class="label rv" data-i18n="com.k">Commodities</div>
+      <h2 class="rv" data-i18n="com.h">Non-ferrous metals at the core, industrial materials alongside.</h2>
+    </div>
+    <div class="tabs rv">
+      <ul class="tab-list" role="tablist">
+        <li><button type="button" role="tab" class="on" data-t="0"><span data-i18n="c1.h">Copper</span><span class="s">Cu</span></button></li>
+        <li><button type="button" role="tab" data-t="1"><span data-i18n="c2.h">Base Metals</span><span class="s">Zn</span></button></li>
+        <li><button type="button" role="tab" data-t="2"><span data-i18n="c3.h">Nickel &amp; Alloys</span><span class="s">Ni</span></button></li>
+        <li><button type="button" role="tab" data-t="3"><span data-i18n="c4.h">Rubber</span><span class="s">NR</span></button></li>
+        <li><button type="button" role="tab" data-t="4"><span data-i18n="c5.h">Industrial Materials</span><span class="s">IM</span></button></li>
+        <li><button type="button" role="tab" data-t="5"><span data-i18n="c6.h">New Categories</span><span class="s">+</span></button></li>
+      </ul>
+      <div class="panes">
+        <div class="pane on" role="tabpanel"><div class="sym" aria-hidden="true">Cu</div><h3 data-i18n="c1.h">Copper</h3><p data-i18n="c1.p">Our principal product line. We trade refined copper cathode from internationally recognised origins and brands, along with copper concentrate for smelters and refiners.</p><div class="tags"><span data-i18n="c1.t1">Copper cathode</span><span data-i18n="c1.t2">Copper concentrate</span></div></div>
+        <div class="pane" role="tabpanel"><div class="sym" aria-hidden="true">Zn</div><h3 data-i18n="c2.h">Base Metals</h3><p data-i18n="c2.p">Zinc, aluminium, tin and other base metals supplied to manufacturers, galvanisers and downstream processors across the region.</p><div class="tags"><span data-i18n="c2.t1">Zinc ingot</span><span data-i18n="c2.t2">Aluminium</span><span data-i18n="c2.t3">Tin ingot</span></div></div>
+        <div class="pane" role="tabpanel"><div class="sym" aria-hidden="true">Ni</div><h3 data-i18n="c3.h">Nickel &amp; Alloys</h3><p data-i18n="c3.p">Nickel pig iron and related ferro-alloy feedstock serving the stainless steel and specialty alloy value chain.</p><div class="tags"><span data-i18n="c3.t1">Nickel pig iron</span><span data-i18n="c3.t2">Ferro-alloys</span></div></div>
+        <div class="pane" role="tabpanel"><div class="sym" aria-hidden="true">NR</div><h3 data-i18n="c4.h">Rubber</h3><p data-i18n="c4.p">Natural rubber sourced from Southeast Asian producing regions for tyre, automotive and industrial manufacturers.</p><div class="tags"><span data-i18n="c4.t1">Natural rubber</span></div></div>
+        <div class="pane" role="tabpanel"><div class="sym" aria-hidden="true">IM</div><h3 data-i18n="c5.h">Industrial Materials</h3><p data-i18n="c5.p">Selected engineering and industrial raw materials, including high-performance polymer products, supplied to specialised end users.</p><div class="tags"><span data-i18n="c5.t1">Polyimide products</span><span data-i18n="c5.t2">Raw materials</span></div></div>
+        <div class="pane" role="tabpanel"><div class="sym" aria-hidden="true">+</div><h3 data-i18n="c6.h">New Categories</h3><p data-i18n="c6.p">We continue to extend into adjacent bulk commodities and new trade corridors where our network and experience add value.</p><div class="tags"><span data-i18n="c6.t1">Energy products</span><span data-i18n="c6.t2">Agricultural products</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MODEL -->
+<section id="model">
+  <div class="inner">
+    <div class="sticky-wrap">
+      <div class="head">
+        <div class="label rv" data-i18n="mod.k">How we trade</div>
+        <h2 class="rv" data-i18n="mod.h">From origin to end user, managed at every step.</h2>
+      </div>
+      <ol class="steps">
+        <li class="rv"><span class="n">01</span><div><h3 data-i18n="s1.h">Source</h3><p data-i18n="s1.p">We secure material from established international suppliers and producers, verifying origin, brand and specification before commitment.</p></div></li>
+        <li class="rv"><span class="n">02</span><div><h3 data-i18n="s2.h">Contract</h3><p data-i18n="s2.p">We agree clear terms with our customers on price, quantity, quality and delivery, aligned with the terms of supply.</p></div></li>
+        <li class="rv"><span class="n">03</span><div><h3 data-i18n="s3.h">Settle</h3><p data-i18n="s3.p">Payments are settled by telegraphic transfer or documentary letters of credit through our banking partners.</p></div></li>
+        <li class="rv"><span class="n">04</span><div><h3 data-i18n="s4.h">Deliver</h3><p data-i18n="s4.p">We coordinate shipping documents, title transfer and logistics through to final receipt by the customer.</p></div></li>
+      </ol>
+    </div>
+    <div class="routes rv">
+      <div class="route">
+        <div class="label" data-i18n="rA.k">Route A</div>
+        <h4 data-i18n="rA.h">Supply to China</h4>
+        <p data-i18n="rA.p">Material is purchased from overseas suppliers and sold to importers in mainland China, who clear customs and take delivery for their domestic operations.</p>
+        <div class="fl" aria-hidden="true"><div class="nd"><i></i><span data-i18n="lbl.sup">Supplier</span></div><div class="ln"></div><div class="nd me"><i></i><span>Zhijinlian</span></div><div class="ln"></div><div class="nd"><i></i><span data-i18n="lbl.imp">China importer</span></div></div>
+      </div>
+      <div class="route">
+        <div class="label" data-i18n="rB.k">Route B</div>
+        <h4 data-i18n="rB.h">Offshore trade</h4>
+        <p data-i18n="rB.p">Material is purchased from and sold to counterparties outside mainland China, with goods moving directly between origin and destination while Zhijinlian manages title, documents and settlement.</p>
+        <div class="fl" aria-hidden="true"><div class="nd"><i></i><span data-i18n="lbl.sup">Supplier</span></div><div class="ln"></div><div class="nd me"><i></i><span>Zhijinlian</span></div><div class="ln"></div><div class="nd"><i></i><span data-i18n="lbl.buy">Overseas buyer</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SETTLEMENT -->
+<section id="settlement">
+  <div class="inner">
+    <div class="head">
+      <div class="label rv" data-i18n="set.k">Trade settlement</div>
+      <h2 class="rv" data-i18n="set.h">Secure, efficient settlement for every trade.</h2>
+    </div>
+    <div class="rows">
+      <div class="row rv"><div class="k" data-i18n="f1.k">Payment</div><h3 data-i18n="f1.h">Telegraphic transfer</h3><p data-i18n="f1.p">Prompt and deferred payment by T/T, agreed on clear terms with each supplier and customer.</p></div>
+      <div class="row rv"><div class="k" data-i18n="f2.k">Documentary</div><h3 data-i18n="f2.h">Letters of credit</h3><p data-i18n="f2.p">Documentary credits issued and received through major banks to secure payment and performance.</p></div>
+      <div class="row rv"><div class="k" data-i18n="f3.k">Currency</div><h3 data-i18n="f3.h">Multi-currency</h3><p data-i18n="f3.p">Settlement in US dollars, Hong Kong dollars and renminbi through Hong Kong and mainland banking channels.</p></div>
+      <div class="row rv"><div class="k" data-i18n="f4.k">Partnership</div><h3 data-i18n="f4.h">Banking relationships</h3><p data-i18n="f4.p">Long-term cooperation with major Chinese and international financial institutions, built on transparent reporting.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- REACH -->
+<section id="reach">
+  <div class="inner">
+    <div class="head">
+      <div class="label rv" data-i18n="rch.k">Our reach</div>
+      <h2 class="rv" data-i18n="rch.h">Positioned at the centre of Asia's metals flows.</h2>
+    </div>
+    <div class="map rv" aria-hidden="true">
+      <svg viewBox="0 0 960 400">
+        <g id="dots"></g>
+        <g fill="none" stroke="#d48a5c" stroke-width="1.4">
+          <path d="M640 150 Q610 230 600 290" stroke-dasharray="5 5"/>
+          <path d="M640 150 Q655 115 665 85" stroke-dasharray="5 5"/>
+          <path d="M160 300 Q400 110 640 150"/>
+          <path d="M300 340 Q470 250 600 290"/>
+        </g>
+        <g font-family="Source Sans 3,Arial,sans-serif" font-size="14" fill="#ffffff">
+          <circle cx="640" cy="150" r="8" fill="#d48a5c"/><circle cx="640" cy="150" r="17" fill="none" stroke="#d48a5c" stroke-opacity=".5"/><text x="664" y="155" data-i18n="r1.h">Hong Kong</text>
+          <circle cx="600" cy="290" r="6" fill="#ffffff"/><text x="618" y="304" data-i18n="r3.h">Singapore</text>
+          <circle cx="665" cy="85" r="5" fill="#ffffff"/><text x="680" y="82" data-i18n="r2.h">Mainland China</text>
+          <circle cx="160" cy="300" r="5" fill="#8696aa"/><text x="120" y="330" fill="#9fb0c2" data-i18n="r4.h">Global origins</text>
+          <circle cx="300" cy="340" r="5" fill="#8696aa"/>
+        </g>
+      </svg>
+    </div>
+    <ul class="reach-cols">
+      <li class="rv"><b data-i18n="r1.h">Hong Kong</b><span data-i18n="r1.p">Headquarters &amp; trading platform</span></li>
+      <li class="rv"><b data-i18n="r2.h">Mainland China</b><span data-i18n="r2.p">Importers &amp; industrial end users</span></li>
+      <li class="rv"><b data-i18n="r3.h">Singapore</b><span data-i18n="r3.p">International supply &amp; trading counterparties</span></li>
+      <li class="rv"><b data-i18n="r4.h">Global origins</b><span data-i18n="r4.p">Producers across Africa, Latin America &amp; Asia</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- RESPONSIBILITY -->
+<section id="responsibility">
+  <div class="inner">
+    <div class="head">
+      <div class="label rv" data-i18n="rsp.k">Responsibility</div>
+      <h2 class="rv" data-i18n="rsp.h">Trading with integrity, transparency and care.</h2>
+    </div>
+    <div class="cols4">
+      <div class="c4 rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 3v18M5 7h14M7 7l-3 7h6l-3-7zM17 7l-3 7h6l-3-7z"/></svg><h3 data-i18n="q1.h">Compliance</h3><p data-i18n="q1.p">We conduct business in line with applicable laws and regulations in every jurisdiction where we operate, including trade controls and international sanctions.</p></div>
+      <div class="c4 rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg><h3 data-i18n="q2.h">Know your counterparty</h3><p data-i18n="q2.p">Every supplier and customer is subject to due diligence before onboarding and is reviewed on an ongoing basis.</p></div>
+      <div class="c4 rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 20c0-8 6-14 16-16-1 10-7 16-15 16"/><path d="M4 20l8-8"/></svg><h3 data-i18n="q3.h">Responsible sourcing</h3><p data-i18n="q3.p">We favour recognised origins and brands and expect our partners to uphold responsible standards across the supply chain.</p></div>
+      <div class="c4 rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="4" y="3" width="16" height="18"/><path d="M8 8h8M8 12h8M8 16h5"/></svg><h3 data-i18n="q4.h">Financial discipline</h3><p data-i18n="q4.p">Audited annual accounts, prudent risk limits and transparent reporting underpin our relationships with banks and partners.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- STATEMENT -->
+<section class="statement">
+  <div class="inner">
+    <blockquote class="rv" data-i18n="stmt">We grow by being a <span class="hl">dependable link</span> in the chain, between supply and demand, and between our partners and the markets they serve.</blockquote>
+  </div>
+</section>
+
+<footer>
+  <div class="inner">
+    <p data-i18n="ft.p">Zhijinlian International Limited is a Hong Kong-incorporated trading company specialising in non-ferrous metals and industrial raw materials.</p>
+    <span>© <span class="yr">2026</span> <span data-i18n="ft.copy">Zhijinlian International Limited 智金鏈國際有限公司. All rights reserved.</span></span>
+  </div>
+</footer>
+
+</main>
+
+<script>
+var ZH={
+"nav.about":"关于我们","nav.com":"经营品类","nav.model":"贸易模式","nav.settle":"贸易结算","nav.resp":"合规与责任",
+"hero.eyebrow":"香港 · 大宗商品贸易",
+"hero.title":"连接全球<span class=\"hl\">金属</span>资源<br>与市场需求",
+"hero.lead":"智金鏈國際有限公司专注于有色金属及工业原材料贸易，连接全球生产商、供应商与亚洲各地的工业需求。",
+"hero.cta1":"经营品类 →","hero.cta2":"贸易模式",
+"hero.m1":"成立于香港","hero.m2":"核心贸易区域","hero.m3a":"有色金属","hero.m3":"核心业务方向",
+"about.k":"关于我们","about.h":"以供应链管理为根基的专业贸易公司",
+"about.p1":"智金鏈國際有限公司于2018年在香港成立，专注于全球大宗商品贸易，以有色金属为核心，并经营橡胶及其他工业原材料。",
+"about.p2":"公司团队在金属供应链上积累了长期稳定的合作关系，覆盖国际知名贸易商与生产商，以及大中华区和东南亚的工业客户。依托这一网络，我们能够获得稳定、品质可靠的货源，并高效对接终端用户。",
+"about.p3":"我们与每一位合作伙伴坚持清晰的合同条款、审慎的风险管理和及时的结算，致力于与供应商、客户及合作银行在稳健、透明的基础上共同成长。",
+"pil.1h":"稳定货源","pil.1p":"与全球知名供应商合作，确保货物品质可靠、品牌可溯。",
+"pil.2h":"审慎风控","pil.2p":"对每笔交易的定价、信用及交易对手实施严格管控。",
+"pil.3h":"高效执行","pil.3p":"跨境单据、物流与结算流程规范高效。",
+"com.k":"经营品类","com.h":"以有色金属为核心，兼营工业原材料",
+"c1.h":"铜","c1.p":"公司主营产品。我们经营来自国际认可产地和品牌的电解铜，以及供应冶炼厂的铜精矿。","c1.t1":"电解铜","c1.t2":"铜精矿",
+"c2.h":"基本金属","c2.p":"锌、铝、锡等基本金属，供应区域内的制造商、镀锌企业及下游加工企业。","c2.t1":"锌锭","c2.t2":"铝","c2.t3":"锡锭",
+"c3.h":"镍及合金","c3.p":"镍生铁及相关铁合金原料，服务不锈钢及特种合金产业链。","c3.t1":"镍生铁","c3.t2":"铁合金",
+"c4.h":"橡胶","c4.p":"天然橡胶采购自东南亚主产区，供应轮胎、汽车及工业制造企业。","c4.t1":"天然橡胶",
+"c5.h":"工业材料","c5.p":"精选工程及工业原材料，包括高性能高分子产品，供应专业终端用户。","c5.t1":"聚酰亚胺制品","c5.t2":"工业原材料",
+"c6.h":"拓展品类","c6.p":"在网络与经验具备优势的领域，持续拓展相关大宗商品品类及新的贸易区域。","c6.t1":"能源产品","c6.t2":"农副产品",
+"mod.k":"贸易模式","mod.h":"从产地到终端用户，全流程专业管理",
+"s1.h":"采购","s1.p":"向国际知名供应商及生产商采购，在确认交易前核实产地、品牌及规格。",
+"s2.h":"签约","s2.p":"与客户就价格、数量、质量及交付达成明确条款，并与采购条款相匹配。",
+"s3.h":"结算","s3.p":"通过合作银行以电汇或跟单信用证方式完成结算。",
+"s4.h":"交付","s4.p":"统筹货运单据、货权转移及物流安排，直至客户最终收货。",
+"rA.k":"模式一","rA.h":"销往中国","rA.p":"向境外供应商采购，销售给中国境内进口商，由进口商办理报关并收货，用于其境内经营。",
+"rB.k":"模式二","rB.h":"离岸贸易","rB.p":"向境外交易对手采购并销售给境外买方，货物在产地与目的地之间直接运输，由智金鏈负责货权、单据及结算管理。",
+"lbl.sup":"供应商","lbl.imp":"中国进口商","lbl.buy":"境外买方",
+"set.k":"贸易结算","set.h":"安全、高效的贸易结算",
+"f1.k":"付款","f1.h":"电汇","f1.p":"即期及远期电汇付款，与每位供应商和客户约定清晰条款。",
+"f2.k":"单证","f2.h":"信用证","f2.p":"通过主要银行开立及接收跟单信用证，保障付款与履约。",
+"f3.k":"币种","f3.h":"多币种结算","f3.p":"通过香港及内地银行渠道，以美元、港币及人民币进行结算。",
+"f4.k":"合作","f4.h":"银行合作","f4.p":"与中外主要金融机构保持长期合作，以透明的信息披露为基础。",
+"rch.k":"业务网络","rch.h":"立足亚洲金属贸易流通中心",
+"r1.h":"香港","r1.p":"总部及贸易平台","r2.h":"中国内地","r2.p":"进口商及工业终端用户","r3.h":"新加坡","r3.p":"国际货源及贸易伙伴","r4.h":"全球产地","r4.p":"非洲、拉丁美洲及亚洲的生产商",
+"rsp.k":"合规与责任","rsp.h":"诚信、透明、负责任地开展贸易",
+"q1.h":"合规经营","q1.p":"我们在所有经营地遵守适用的法律法规，包括贸易管制及国际制裁相关规定。",
+"q2.h":"交易对手尽调","q2.p":"所有供应商和客户在合作前均须经过尽职调查，并持续复核。",
+"q3.h":"负责任采购","q3.p":"优先选择国际认可的产地和品牌，并要求合作伙伴在供应链中遵循负责任的标准。",
+"q4.h":"财务稳健","q4.p":"经审计的年度财务报表、审慎的风险限额与透明的信息披露，是我们与银行及合作伙伴关系的基础。",
+"stmt":"我们致力于成为产业链中<span class=\"hl\">值得信赖的一环</span>，连接供应与需求，连接合作伙伴与其服务的市场。",
+"ft.p":"智金鏈國際有限公司是一家在香港注册成立的贸易公司，专注于有色金属及工业原材料贸易。",
+"ft.c":"公司","ft.b":"业务","ft.copy":"智金鏈國際有限公司 Zhijinlian International Limited 版权所有。","ft.inc":"于香港特别行政区注册成立"
+};
+var EN={};
+var nodes=document.querySelectorAll('[data-i18n]');
+nodes.forEach(function(n){var k=n.getAttribute('data-i18n');if(!(k in EN))EN[k]=n.innerHTML;});
+function setLang(l){
+  var d=l==='zh'?ZH:EN;
+  nodes.forEach(function(n){var k=n.getAttribute('data-i18n');n.innerHTML=(d[k]!=null)?d[k]:EN[k];});
+  document.documentElement.lang=l==='zh'?'zh':'en';
+  document.title=l==='zh'?'智金鏈國際有限公司 | Zhijinlian International Limited':'Zhijinlian International Limited | 智金鏈國際有限公司';
+  document.querySelectorAll('.lang button').forEach(function(b){b.classList.toggle('on',b.getAttribute('data-lang')===l)});
+  try{localStorage.setItem('zjl-lang',l)}catch(e){}
+}
+document.querySelectorAll('.lang button').forEach(function(b){b.addEventListener('click',function(){setLang(b.getAttribute('data-lang'))})});
+(function(){
+  var q=(location.search.match(/[?&]lang=(en|zh)/)||[])[1],s=null;
+  try{s=localStorage.getItem('zjl-lang')}catch(e){}
+  var l=q||s||'en'; if(l!=='en')setLang(l);
+})();
+
+// mobile drawer
+(function(){
+  var side=document.getElementById('side'),scrim=document.querySelector('.scrim'),bg=document.querySelector('.burger');
+  function t(open){side.classList.toggle('open',open);scrim.classList.toggle('open',open);bg.classList.toggle('x',open);}
+  bg.addEventListener('click',function(){t(!side.classList.contains('open'))});
+  scrim.addEventListener('click',function(){t(false)});
+  side.querySelectorAll('.side-nav a').forEach(function(a){a.addEventListener('click',function(){t(false)})});
+})();
+
+// tabs
+(function(){
+  var btns=document.querySelectorAll('.tab-list button'),panes=document.querySelectorAll('.pane');
+  btns.forEach(function(b){b.addEventListener('click',function(){
+    var i=+b.getAttribute('data-t');
+    btns.forEach(function(x,j){x.classList.toggle('on',j===i);x.setAttribute('aria-selected',j===i)});
+    panes.forEach(function(p,j){p.classList.toggle('on',j===i)});
+  })});
+})();
+
+// scroll spy
+(function(){
+  var links=[].slice.call(document.querySelectorAll('.side-nav a'));
+  var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'))});
+  function spy(){
+    var y=window.scrollY+window.innerHeight*0.35,idx=-1;
+    secs.forEach(function(s,i){if(s&&s.offsetTop<=y)idx=i});
+    links.forEach(function(a,i){a.classList.toggle('active',i===idx)});
+  }
+  window.addEventListener('scroll',spy,{passive:true});spy();
+})();
+
+// dot map
+(function(){
+  var g=document.getElementById('dots');if(!g)return;var s='';
+  var blobs=[[660,120,170,80],[470,100,210,70],[610,280,70,35],[760,300,110,40],[180,300,110,80],[300,220,80,45],[840,140,60,50]];
+  for(var x=10;x<960;x+=14){for(var y=10;y<400;y+=14){
+    var on=blobs.some(function(b){var dx=(x-b[0])/b[2],dy=(y-b[1])/b[3];return dx*dx+dy*dy<1});
+    if(on)s+='<circle cx="'+x+'" cy="'+y+'" r="1.8" fill="#2c4260"/>';
+  }}
+  g.innerHTML=s;
+})();
+
+// reveal
+(function(){
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.1});
+  els.forEach(function(e){io.observe(e)});
+  setTimeout(function(){els.forEach(function(e){e.classList.add('in')})},4000);
+})();
+document.querySelectorAll('.yr').forEach(function(e){e.textContent=new Date().getFullYear()});
+</script>
+</body>
+</html>
